@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .main {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 40%;
+            margin: 0 auto;
+        }
+
+        .main h2 {
+            color: #4caf50;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 400;
+        }
+
+        .inputType {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .submitBtn {
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .heading {
+            width: 50%;
+        }
+        .logo {
+            width: 50%;
+            text-align: right;
+            padding-top: 15px;
+        }
+        .logo img {
+            border: 3px solid #e0c6c6;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .header {
+            margin-bottom: 25px;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="header">
+            <div class="heading">
+                <h2>Registration Form</h2>
+            </div>
+    
+            <div class="logo">
+                <img src="images/logo1.png" width="40" height="40">
+            </div>
+            
+        </div>
+
+        <div class="form clear">
+            <form action="" method="get">
+                <label for="first">First Name:</label>
+                <input class="inputType" type="text" id="first" name="first" required />
+    
+                <label for="last">Last Name:</label>
+                <input class="inputType" type="text" id="last" name="last" required />
+    
+                <label for="email">Email:</label>
+                <input class="inputType" type="email" id="email" name="email" required />
+    
+                <label for="password">Password:</label>
+                <input class="inputType" type="password" id="password" name="password" required />
+    
+                <label for="repassword">Re-type Password:</label>
+                <input class="inputType" type="password" id="repassword" name="repassword" required />
+    
+                <label for="mobile">Contact:</label>
+                <input class="inputType" type="text" id="mobile" name="mobile" maxlength="10" required />
+    
+                <label for="gender">Gender:</label>
+                <select class="inputType" id="gender" name="gender" required>
+                    <option value="male">
+                        Male
+                    </option>
+                    <option value="female">
+                        Female
+                    </option>
+                    <option value="other">
+                        Other
+                    </option>
+                </select>
+    
+                <button class="submitBtn" type="submit">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

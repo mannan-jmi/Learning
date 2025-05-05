@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Elements</title>
+    <style>
+        @media only screen and (max-width: 800px) {
+            .first {
+                display: block;
+            }
+            .second {
+                display: none;
+            }
+            .third {
+                display: none;
+            }
+        }
+        @media only screen and (min-width: 800px) {
+            .first {
+                display: none;
+            }
+            .second {
+                display: none;
+            }
+            .third {
+                display: block;
+            }
+        }
+        @media only screen and (min-width: 600px) {
+            .first {
+                display: none;
+            }
+            .second {
+                display: none;
+            }
+            .third {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <picture>
+
+        <source media="(min-width: 800px)" srcset="images/third.png" >
+
+        <source media="(min-width: 600px)" srcset="images/second.png" >
+        
+
+        <img src="images/first.png" style="width: auto;">
+
+    </picture>
+
+    <br><br>
+
+    <div>
+        <div class="first">
+            <img src="images/first.png">
+        </div>
+        <div class="second">
+            <img src="images/second.png">
+        </div>
+        <div class="third">
+            <img src="images/third.png">
+        </div>
+    </div>
+</body>
+</html>

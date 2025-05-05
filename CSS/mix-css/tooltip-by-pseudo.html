@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip</title>
+    <style>
+        .text-wrapper {
+            position: relative;
+        }
+        .text::after {
+            position: absolute;
+            content: attr(data-tooltip);
+            background-color: black;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            left: 0;
+            top: 20px;
+            display: none;
+        }
+        .text:hover::after {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="conatiner">
+        <div class="text-wrapper">
+            <span class="text" data-tooltip="I am tooltip!">
+                Hi, Hover me!
+            </span>
+        </div>
+    </div>
+</body>
+</html>

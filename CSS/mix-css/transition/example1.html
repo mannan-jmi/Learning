@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+
+            /* Time in second to transition with properties */
+            transition: width 2s, height 2s;
+        }
+
+        .box:hover {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+    <br>
+    <div>
+        <button id="incbtn">Inc</button>
+
+        <button id="decbtn">Dec</button>
+    </div>
+    
+
+    <script>
+        const incButton = document.querySelector('#incbtn');
+        const box = document.querySelector('.box');
+
+        incButton.addEventListener('click', function () {
+            box.style.width = '200px';
+            box.style.height = '200px';
+        });
+
+        const decButton = document.querySelector('#decbtn');
+        decButton.addEventListener('click', function () {
+            box.style.width = '100px';
+            box.style.height = '100px';
+        });
+    </script>
+
+</body>
+</html>

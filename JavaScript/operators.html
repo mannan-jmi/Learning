@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+    
+</head>
+<body>
+    <!-- Addtion -->
+    <h1>Add below values - </h1>
+    <p>50 and 30</p>
+    <h1>Result: <span id="result"></span></h1>
+
+    <hr>
+
+    <!-- Subtraction -->
+    <h1>Subtract below values - </h1>
+    <p>30 and 50</p>
+    <h1>Result: <span id="sbr"></span></h1>
+
+    <hr>
+    
+    <!-- Multiplication -->
+    <h1>Multiply below values - </h1>
+    <p>30 and 50</p>
+    <h1>Result: <span id="mul"></span></h1>
+
+    <!-- JavaScript Part -->
+    <script>
+        // var name = "Abdul Mannan"; // Assignment Operator
+
+        var a = 50;
+        var b = 30;
+
+        // Addition
+        var c = a + b; // Addition operator
+        document.getElementById('result').innerText = c;
+        // document.getElementById('result').innerText = `<i>${c}</i>`;
+        // document.getElementById('rst').innerHTML = `<i>${c}</i>`;
+
+
+        // Subtraction
+       var d = a - b; // Subtraction operator
+       document.getElementById('sbr').innerText = d;
+
+        // Multiplication
+        var m = a * b; // Multiplication operator
+        document.getElementById('mul').innerText = m;
+    </script>
+</body>
+</html>

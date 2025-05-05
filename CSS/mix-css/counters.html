@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body {
+            counter-reset: drinkCounter;
+        }
+
+        h1::before {
+            counter-increment: drinkCounter;
+            content: counter(drinkCounter) ": ";
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Coffe</h1>
+        <h1>Tea</h1>
+        <h1>Soup</h1>
+        <h1>Crispy Soup</h1>
+
+    </div>
+</body>
+</html>

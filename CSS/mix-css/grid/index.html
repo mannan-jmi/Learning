@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Grid</title>
+    <style>
+        .container {
+            margin: 100px;
+            width: 700px;
+            height: 700px;
+            background: beige;
+
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;
+
+            grid-gap: 20px;
+        }
+        .item1 {
+            background: green;
+            grid-column: span 2;
+        }
+        .item2 {
+            background: yellow;
+            grid-row: span 3;
+        }
+        .item3 {
+            background: plum;
+        }
+        .item4 {
+            background: black;
+        }
+        .item5 {
+            background: purple;
+        }
+        .item6 {
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item1">1</div>
+        <div class="items item2">2</div>
+        <div class="items item3">3</div>
+        <div class="items item4">4</div>
+        <div class="items item5">5</div>
+        <div class="items item6">6</div>
+    </div>
+</body>
+</html>

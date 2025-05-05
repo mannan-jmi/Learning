@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Combinator</title>
+    <style>
+        .middle > p {
+            color: rgb(197, 7, 7);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <p>This this 1st pra.</p>
+            <p>This this 2nd pra.</p>
+        </div>
+
+        <div class="middle">
+            <!-- this two are child of middle -->
+            <p>This this 3rd pra.</p>
+            <p>This this 4th pra.</p>
+
+            <!-- This div is child of middle but its content is not child of middle -->
+            <div>
+                <!-- This content is child of div -->
+                <p>This this under middle pra.</p>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <p>This this 5th pra.</p>
+        </div>
+    </div>
+</body>
+</html>

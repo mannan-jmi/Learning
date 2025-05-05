@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+.container {
+    margin: 15px;
+    /*
+    width: 80%;
+    margin: 0 auto;
+    */
+}
+.header {
+    background-color: #04AA6D;
+    height: 150px;
+    border-radius: 5px;
+    padding: 20px 0 0 20px;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+.main-heading {
+    font-weight: 600;
+    font-size: 60px;
+}
+.sub-heading {
+    font-weight: 400;
+    font-size: 30px;
+}
+.content {
+    display: flex;
+    gap: 30px;
+}
+.leftside {
+    width: 20%;
+}
+.main {
+    width: 60%;
+}
+.rightside {
+    width: 20%;
+    background-color: #32A4E7;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 25px;
+}
+.rightside p {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.main h1 {
+    font-size: 50px;
+}
+.main p {
+    font-size: 26px;
+    line-height: 1.5;
+}
+.main a {
+    font-size: 24px;
+    color: #000000;
+}
+.main div {
+    font-size: 24px;
+}
+.sidemenu {
+    display: block;
+    background-color: #F1F1F1;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ada8a8e2;
+}
+.sidemenu:hover {
+    background-color: #04AA6D;
+    color: #ffffff;
+}
+.leftside a {
+    font-size: 26px;
+    text-decoration: none;
+    color: #000000;
+}
+.footer {
+    background-color: #F1F1F1;
+    padding: 10px;
+    margin-top: 40px;
+    border-radius: 5px;
+    border: 1px solid #ada8a8e2;
+}
+
+/* It will add smooth effetct when media query reduces font size of below classes */
+.main-heading, .sub-heading {
+    transition: font-size 0.50s ease-in-out;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 980px) {
+    .container {
+        overflow-x: hidden;
+    }
+    .content {
+        display: block;
+    } 
+    .leftside, .main, .rightside {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .main p, .rightside, .footer p {
+        text-align: justify;
+    }
+}
+@media (max-width: 795px) {
+    .main-heading {
+        font-size: 40px;
+    }
+    .sub-heading {
+        font-size: 30px;
+    }
+}
+@media (max-width: 541px) {
+    .main-heading {
+        font-size: 24px;
+    }
+    .sub-heading {
+        font-size: 14px;
+    }
+}

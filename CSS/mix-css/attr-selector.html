@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selector</title>
+    <style>
+        .attr {
+            margin-bottom: 50px;
+        }
+
+        a[title] {
+            background-color: yellow;
+        }
+
+        a[title="yt"] {
+            background-color: green;
+        }
+
+        a[data-text|="you"] {
+            background-color: red;
+        }
+
+        div[title~="top"] {
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        input[type="text"] {
+            border: 1px solid blue;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="attr">
+            <a href="#">Google</a>
+            <a href="#" title="Youtube">Youtube</a>
+            <a href="#" title="linkedIn">LinkedIn</a>
+        </div>
+
+        <div class="attr">
+            <a href="#">Google</a>
+            <a href="#" title="yt">Youtube</a>
+            <a href="#" title="li" target="_blank">LinkedIn</a>
+        </div>
+
+        <div class="attr">
+            <a href="#" >Google</a>
+            <a href="#" data-text="youtube" >Youtube</a>
+            <a href="#" data-text="you-tube" >You - tube</a>
+            <a href="#" data-text="linked-in" >LinkedIn</a>
+        </div>
+
+        <div class="attr">
+            <div title="This is top div">TOP</div>
+            <div title="This is bottom div">Bottom</div>
+        </div>
+
+        <div class="attr">
+            <input type="text" placeholder="Enter your name">
+            <br><br>
+            <input type="password" placeholder="Enter your name">
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+.tooltip::after {
+    position: absolute;
+    content: attr(data-tooltip);
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    margin-left: 6px;
+    margin-top: 6px;
+    display: none;
+}
+.tooltip:hover::after {
+    display: block;
+}

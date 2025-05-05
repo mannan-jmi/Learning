@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .input {
+            padding-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="submit.php" method="post">
+            <div class="input">
+                <input type="text" name="firstName" placeholder="First Name">
+            </div>
+
+            <div class="input">
+                <input type="text" name="lastName" placeholder="Last Name">
+            </div>
+
+            <div class="input">
+                <input type="email" name="email" placeholder="Email">
+            </div>
+
+            <div class="input">
+                <input type="number" name="phoneNumber" placeholder="Phone">
+            </div>
+
+            <div class="input">
+                <textarea name="address" rows="2" placeholder="Address"></textarea>
+            </div>
+
+            <div class="input">
+                <select name="hobby">
+                    <option value="">--Select Hobby--</option>
+                    <option value="Cicket">Cicket</option>
+                    <option value="Music">Music</option>
+                    <option value="Web">Watching Web Series</option>
+                </select>
+            </div>
+
+            <div class="input">
+                <label>
+                    <input type="radio" name="gender" value="male"> Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female"> Female
+                </label>
+            </div>
+
+            <div class="input">
+                <label>
+                    Are you agree to resgistered! <input type="checkbox" name="terms" value="ok">
+                </label>
+            </div>
+
+            <div class="cotainer">
+                <input type="submit" value="Submit">
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

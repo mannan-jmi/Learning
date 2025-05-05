@@ -1,0 +1,9 @@
+# This is my first CSS Library to make tooltip
+
+# First link this css library in your head section
+
+# Use span with class name `tooltip`
+
+# Pass `data-tooltip` attribute in span where class name is `tooltip`
+
+# Put `data-tooltip` text value which will display in tooltip

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip</title>
+    <style>
+        .main-text {
+            font-size: 40px;
+        }
+        .tooltip-text {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.726);
+            color: white;
+            width: 25%;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="conatiner">
+
+        <div class="text-wrapper">
+
+            <div class="main-text">
+                <span class="text">Hi, Hover me mouse cursor!</span>
+            </div>
+
+            <div class="tooltip-text">
+                Hi, I am here!
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript to show tooltip on mousehover -->
+    <script>
+        const textElement = document.querySelector('.text');
+        const tooltip = document.querySelector('.tooltip-text');
+
+        textElement.addEventListener('mouseenter', function () {
+            tooltip.style.display = 'block';
+        });
+
+        textElement.addEventListener('mouseleave', function () {
+            tooltip.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

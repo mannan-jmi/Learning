@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+
+            /* Time in second to transition with properties */
+            transition: width 2s, height 2s;
+        }
+
+        #button {
+            width: 100px;
+            font-size: 40px;
+            background: rgb(101, 101, 228);
+            color: white;
+            border: 1px solid rgb(70, 70, 240);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: width 2s;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+    <br>
+    <div>
+        <button id="button">+</button>
+    </div>
+    
+
+    <script>
+        const box = document.querySelector('.box');
+
+        const button = document.querySelector('#button');
+
+        button.addEventListener('click', function () {
+            
+
+            if (button.innerText == '+') {
+                box.style.width = '200px';
+                box.style.height = '200px';
+                button.style.width = '200px';
+
+                // Change the name
+                button.innerText = '-';
+            } else {
+                box.style.width = '100px';
+                box.style.height = '100px';
+                button.style.width = '100px';
+
+                // Change the name
+                button.innerText = '+';
+            }
+        });
+        
+    </script>
+
+</body>
+</html>
