@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types Array</title>
+    <script>
+        // Array - Always defined in sqaure bracket
+        var car = ["volvo", "BMW", "Hundai", "BMW"];
+        console.log(car[0]);
+        
+        // Advance function of array we will learn latter
+        var findBmw = car.find(item => {
+            return item == 'BMW';
+        })
+        console.log(findBmw);
+
+        var findBmw = car.filter(item => {
+            return item == 'BMW';
+        })
+        console.log(findBmw);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
