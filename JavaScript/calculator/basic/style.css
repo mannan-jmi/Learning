@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+}
+.calculator {
+    width: 400px;
+    margin: 40px auto;
+    height: 575px;
+    background: #3d89ee;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #044cab;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.input-form {
+    display: flex;
+    justify-content: center;
+}
+.input-form .control-input {
+    width: 90%;
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 40px;
+}
+.input-form input:focus {
+    outline: none;
+    border: 1px solid grey;
+}
+.title {
+    text-align: center;
+    padding-bottom: 10px;
+    color: #fff;
+}
+#inputValue {
+    text-align: right;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    gap: 20px;
+    justify-content: center;
+}
+.btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    background-color: #f2f2f2;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease-in-out;
+}
+.btn:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+.btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.btn:nth-child(1) {
+  color: rgb(244, 99, 99);
+}
+
+.btn:nth-child(20) {
+  background-color: #4caf50;
+  color: white;
+}
+.btn:nth-child(20):hover {
+  background-color: #43a047;
+}
