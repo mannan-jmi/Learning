@@ -35,21 +35,34 @@ function getLastValue(value) {
  * @param {string} inputValue 
  */
 function appendValue(inputValue) {
-   let currentValue = getCurrentValue();
+    let arthMaticArray = ['*', '/', '+', '%', '-', '.'];
+    let currentValue = getCurrentValue();
+
     if (currentValue.length <= 14) {
+        // Start - Raplaced duplicate arthmatic value in lastest operator
+        let lastValueOfCurrentInputFiled = getLastValue(currentValue);
+        if (lastValueOfCurrentInputFiled !== '') {
+            let isLastValueArthMatic = arthMaticArray.includes(lastValueOfCurrentInputFiled);
+            let isNewValueArthMatic = arthMaticArray.includes(inputValue);
+            if (isLastValueArthMatic && isNewValueArthMatic) {
+                currentValue = currentValue.slice(0, -1)
+            }
+        }
+        // End - Raplaced duplicate arthmatic value in lastest operator
+
         let newValue = currentValue + inputValue;
         updateInputValue(newValue);
     } else {
-        alert("Can't enter more then 14 digits");
+        alert("Can't enter more then 15 digits");
     }
-    focusInput()
+    focusInput();
 }
 
 /**
  * Function to calculate all values
  */
 function result() {
-    let currentValue =  getCurrentValue();
+    let currentValue = getCurrentValue();
     let isDataCorrect = checkLastValue(currentValue);
     if (currentValue !== '' && isDataCorrect) {
         let evaluatedValue = eval(currentValue);
@@ -84,7 +97,7 @@ function removeLastValue() {
 function checkLastValue(currentValue) {
     let isCorrect = false;
     let lastValue = parseInt(currentValue.slice(-1));
-    if (typeof lastValue == 'number' && !isNaN(lastValue) ) {
+    if (typeof lastValue == 'number' && !isNaN(lastValue)) {
         isCorrect = true;
     }
     return isCorrect;
