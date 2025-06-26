@@ -1,0 +1,47 @@
+<script>
+    let fruit = 'banana';
+    let food = 'biryani';
+    let fvF = 'Stew';
+    let hobby = 'Cricket';
+
+    if ( (fruit == 'banana' || food == 'korma') && hobby == 'asdfa' ) {
+        console.log('Condition Matched!');
+    } else {
+        console.log('No Any Condition Matched!');
+    }
+
+    console.log('\n', '+++++++++++++ Multiple Conditions seperately +++++++++++++');
+
+    if (fvF == 'Stew') {
+        console.log('Bingoo! Your fvourite food matched!');
+    } else if (food == 'biryani') {
+        console.log('Your food matched!');
+    } else if (hobby == 'Cricket') {
+        console.log('Your hobby matched!');
+    } else {
+        console.log('Nothing is matched!');
+    }
+
+    console.log('\n', '+++++++++++++ Ternary Operator +++++++++++++');
+    let isFvFMatched = (fvF == 'Stew') ? 'Your Fv Food Matched' : 'Your Fv food did not matched';
+    console.log(isFvFMatched);
+
+    console.log('\n', '+++++++++++++ Bitwise Operator +++++++++++++');
+    let bitFvFoodMatchedOrNot = (fvF == 'Stew') && 'Your Fv Food Matched';
+    // let bitFvFoodMatchedOrNot = (fvF == 'Stew') || 'Your Fv Food Matched';
+    console.log(bitFvFoodMatchedOrNot);
+
+    console.log('\n', '+++++++++++++ Boolean Condition +++++++++++++');
+    
+    // let flag = true;
+
+    let flag = 0;
+
+    if (!flag) {
+        console.log('IF part triggered');
+    } else {
+        console.log('ELSE part triggered');
+    }
+    
+    
+</script>

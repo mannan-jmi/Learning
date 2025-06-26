@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Push</title>
+  </head>
+  <body>
+    <script>
+      // Below comment is syntax clarification of splice
+      // array.splice(startIndex, deleteCount, item1, item2, ...);
+
+      //   Adding new value in place of mango
+      let fruits = ["apple", "banana", "mango"];
+      fruits.splice(2, 0, "orange");
+
+      console.log(fruits);
+
+      //   If I want to remove value of banana
+      fruits.splice(1, 1, "strawberry", "cherry");
+      console.log(fruits);
+    </script>
+  </body>
+</html>

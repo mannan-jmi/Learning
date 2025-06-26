@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    
+    <!-- JS -->
+     <script>
+        let name = "shakeel";
+        console.log('name - ', name);
+
+        let newName = name; // Call by value
+        console.log('newName - ', newName);
+
+        name = "Ahamed";
+
+        console.log(name);
+        console.log(newName);
+        
+        
+        console.log('\n', '=======================');
+        
+
+        let car = {
+            company: 'hundai',
+            engine: '4 strokes',
+            ac: 'yes',
+            name: 'i20'
+        };
+
+        console.log('car - ', car);
+
+        let newCar = car; // Call by refrence of car
+
+        console.log('newCar - ', newCar);
+
+        newCar.name = 'hundai new';
+
+        console.log(car);
+
+        console.log(newCar);
+        
+        
+        
+     </script>
+</body>
+</html>

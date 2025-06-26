@@ -1,0 +1,15 @@
+<script>
+    const person = {
+        fname: "Mannan",
+        lname: "Abdul",
+        id: "123658",
+        fullName: function () {
+            const getName = () => {
+                return this.fname + " " + this.lname;
+            };
+            return getName();
+        },
+    };
+
+    console.log(person.fullName());
+</script>

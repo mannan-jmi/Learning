@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add To Do List</title>
+    <style>
+      .form {
+        margin-bottom: 50px;
+      }
+      .form-control {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body onload="displayList()">
+    <div class="container">
+      <div class="title">
+        <h1>Add fruits in to do list</h1>
+      </div>
+      <div class="form">
+        <div class="form-control">
+          <input type="text" id="fruitName" placeholder="Enter any fruits name" />
+        </div>
+        <div class="form-control">
+          <button onclick="addInputValue()">Add</button>
+        </div>
+      </div>
+      <div class="result">
+        <ul id="addlist"></ul>
+      </div>
+    </div>
+
+    <script>
+      const list = [];
+
+      function displayList() {
+        let el = "";
+        list.forEach((value, index) => {
+          el += `<li>${value} <a href="javascript:void(0)" onclick="removeItem(${index})" >Remove</a></li>`;
+        });
+        document.getElementById("addlist").innerHTML = el;
+      }
+
+      function addInputValue() {
+        let getInputValue = document.getElementById("fruitName");
+        list.push(getInputValue.value);
+        displayList();
+        getInputValue.value = "";
+      }
+
+      function removeItem(i) {
+        let result = confirm("Are you sure you want to delete this item?");
+        if (result) {
+          list.splice(i, 1);
+          displayList();
+        }
+      }
+    </script>
+  </body>
+</html>

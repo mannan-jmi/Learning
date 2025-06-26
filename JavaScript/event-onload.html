@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Events - Simulated Load</title>
+  </head>
+  <body onload="loaded()">
+    <div class="container">
+      <div class="event">
+        <div id="afterBodyLoad">Waiting for full body load (image below)...</div>
+        <!-- A large image to simulate page load delay -->
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg"
+          alt="Simulated Delay"
+          width="100%"
+        />
+      </div>
+    </div>
+
+    <script>
+      function loaded() {
+        document.getElementById("afterBodyLoad").innerHTML = "Body Part Loaded! Successfully";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript Strings</h1>
+    <h2>The lastIndexOf() Method</h2>
+
+    <p>The position of the last occurrence of "locate" is:</p>
+
+    <p id="demo"></p>
+
+    <script>
+      let text = "Please locate where 'locate' occurs!";
+
+      let word = "locate";
+
+      let indexes = [];
+
+      let index = text.indexOf(word);
+
+      console.log("index - ", index);
+
+      while (index !== -1) {
+        indexes.push(index);
+        console.log("indexes - ", indexes);
+
+        index = text.indexOf(word, index + 1); // search from the next character
+        console.log("While index - ", index);
+      }
+
+      console.log("Indexes of 'locate':", indexes);
+
+      document.getElementById("demo").innerHTML = indexes;
+    </script>
+  </body>
+</html>

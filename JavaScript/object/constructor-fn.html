@@ -1,0 +1,38 @@
+<html>
+  <body>
+    <h1>JavaScript Object Constructors</h1>
+
+    <p id="demo"></p>
+
+    <script>
+      /**
+       * What is Object Constructor Functions
+       * Sometimes we need to create many objects of the same type.
+       * To create an object type we use an object constructor function.
+       * It is considered good practice to name constructor functions with an upper-case first letter.
+       */
+
+      // Constructor Function for Person objects
+      function Person(firstName, lastName, age, phone) {
+        this.first_name = firstName;
+        this.last_name = lastName;
+        this.person_age = age;
+        this.person_phone = phone;
+      }
+
+      let object1 = new Person("Shakeel", "Ahamed", "34", "9876543245");
+      console.log(object1);
+
+      let object2 = new Person("Abdul", "Mannan", "20", "9876543245");
+
+      Person.address = "Sambhal"; // Not Valid, will not add key
+
+      Person.prototype.address = "Sambhal"; // Valid, added key address in prototype object with value sambhal
+
+      console.log(object2);
+
+      // Display age
+      document.getElementById("demo").innerHTML = `My name is ${object2.first_name}.`;
+    </script>
+  </body>
+</html>

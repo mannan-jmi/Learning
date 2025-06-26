@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+
+    <h1>Car Name: <span id="carName"></span> </h1>
+    <h1>Car Engine: <span id="carEngine"></span></h1>
+    
+    <!-- JS -->
+     <script>
+  
+        let car = {
+            company: 'hundai',
+            engine: '4 strokes',
+            ac: 'yes',
+            name: 'i20'
+        };
+
+        document.getElementById('carName').innerHTML = car.name;
+        document.getElementById('carEngine').innerHTML = car.engine;
+        
+        
+        
+        
+     </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<script>
+  let dataArray = [2, 10, 11, 47, 50, 2];
+
+  console.log("By for loop");
+  let forDoubleArray = [];
+  for (i = 0; i < dataArray.length; i++) {
+    let value = dataArray[i];
+    forDoubleArray.push(value * 2);
+  }
+  console.log(forDoubleArray);
+
+  console.log("By ForEach");
+  let forEachDoubleArray = [];
+  dataArray.forEach((item) => {
+    forEachDoubleArray.push(item * 2);
+  });
+  console.log(forEachDoubleArray);
+
+  //map array function
+  console.log("By map function");
+  let result = dataArray.map((item, index, array) => {
+    return item * 2;
+  });
+
+  //   let result = dataArray.map((item) => item * 2);
+
+  console.log(result);
+</script>

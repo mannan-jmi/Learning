@@ -1,0 +1,20 @@
+<script>
+  function addTwoNumber(p1, p1) {
+    return p1 + p2; // p2 is not defined - error throw in catch block
+  }
+
+  function toShowData() {
+    try {
+      const res = addTwoNumber(10, 20);
+      console.log(res);
+
+      //   To throw custom error
+      //   throw { message: "Error in above method" };
+      //   throw new Error("Error in above method");
+    } catch (error) {
+      alert(error.message);
+    }
+  }
+
+  toShowData();
+</script>

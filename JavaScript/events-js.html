@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Events</title>
+    <style>
+      #def {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body onload="loaded()">
+    <div class="conatiner">
+      <div class="event">
+        <h1>What is js events?</h1>
+        <p>
+          <span id="def" onmouseover="onmouseoverFn()" onmouseout="onmouseoutfn()">
+            HTML events are "things" that happen to HTML elements.
+          </span>
+        </p>
+      </div>
+
+      <hr />
+      <div class="event">
+        <div>
+          <p>Click on this button to test onClick Event</p>
+          <button onclick="triggerOnClickEventMethod()">Click Me</button>
+        </div>
+      </div>
+
+      <hr />
+      <div class="event">
+        <div>
+          <p>onchange</p>
+          <select onchange="onchangeFn(event)">
+            <option value="" selected disabled>--select--</option>
+            <option value="BMW">BMW</option>
+            <option value="VOLVO">VOLVO</option>
+            <option value="NANO">NANO</option>
+          </select>
+        </div>
+      </div>
+
+      <hr />
+      <div class="event">
+        <div id="afterBodyLoad"></div>
+      </div>
+
+      <hr />
+      <div class="event">
+        <div>
+          <input type="text" onkeydown="inputChange(event)" />
+        </div>
+        <div id="display-text"></div>
+      </div>
+    </div>
+
+    <script>
+      //   function triggerOnClickEventMethod() {
+      //     alert("Hello, OnClick");
+      //   }
+      const triggerOnClickEventMethod = () => alert("Hello, OnClick");
+
+      function onchangeFn(e) {
+        alert(`You have selected ${e.target.value}`);
+      }
+
+      function onmouseoverFn() {
+        document.getElementById("def").innerHTML =
+          'When JavaScript is used in HTML pages, JavaScript can "react" on these events.';
+      }
+
+      function onmouseoutfn() {
+        document.getElementById("def").innerHTML = 'HTML events are "things" that happen to HTML elements.';
+      }
+
+      function loaded() {
+        document.getElementById("afterBodyLoad").innerHTML = "Body Part Loaded! Successfully";
+      }
+
+      // on keydown event
+      function inputChange(e) {
+        setTimeout(function () {
+          document.getElementById("display-text").innerHTML = e.target.value;
+        }, 100);
+      }
+    </script>
+  </body>
+</html>

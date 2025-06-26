@@ -1,0 +1,29 @@
+<script>
+    // Async task
+    // function callApi() {
+    //     fetch("https://dummyjson.com/products").then((res) => {
+    //         console.log("Api Response - ", res);
+    //     });
+    //     console.log("After api call....");
+    // }
+    // callApi();
+
+    // Making sync - 1st way
+    // function callApi() {
+    //     fetch("https://dummyjson.com/products").then((res) => {
+    //         console.log("Api Response - ", res);
+
+    //         console.log("After api call....");
+    //     });
+    // }
+    // callApi();
+
+    // Making sync - 2nd way
+    async function callApi() {
+        let res = await fetch("https://dummyjson.com/products");
+        console.log("Api Response - ", res);
+
+        console.log("After api call....");
+    }
+    callApi();
+</script>

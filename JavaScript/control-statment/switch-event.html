@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Swtich</title>
+        <style>
+            .container input {
+                padding: 18px;
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Html Part -->
+        <div class="container">
+            <div>
+                <input
+                    id="inputEl"
+                    type="text"
+                    placeholder="Enter Day Name"
+                    onkeydown="checkDay()"
+                />
+            </div>
+            <div>
+                <p id="result"></p>
+            </div>
+        </div>
+
+        <!-- JS PArt -->
+        <script>
+            function renderResult(data) {
+                document.getElementById("result").innerHTML = data;
+            }
+
+            function checkDay() {
+                setTimeout(() => {
+                    let dayName = document.getElementById("inputEl").value;
+                    dayName = dayName.toLowerCase();
+
+                    console.log("Input Vield Value - ", dayName);
+
+                    switch (dayName) {
+                        case "monday":
+                            renderResult("Monday Condition is matched");
+                            break;
+                        case "tuesday":
+                            renderResult("Tuesday Condition is matched");
+                            break;
+                        default:
+                            renderResult("Not a Monday or Tuesday");
+                            break;
+                    }
+                }, timeout);
+            }
+        </script>
+    </body>
+</html>

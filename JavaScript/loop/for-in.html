@@ -1,0 +1,32 @@
+<script>
+    // The JavaScript for in statement loops through the properties of an Object or index of array:
+
+    let user = {
+        id: 12345,
+        name: "Shakeel Ahamed",
+        adress: "Sambhal",
+        phone: "9876543210",
+        gender: "male",
+    };
+
+    for (u in user) {
+        // console.log(u);
+        // console.log(user[u]);
+
+        console.log(`${u} : ${user[u]}`);
+    }
+
+    // Another example with array
+
+    let car = ["BMW", "VOLVO", "HUNDAI", "TOYOTA", 25];
+    for (c in car) {
+        console.log(car[c]);
+    }
+
+    //ex 2
+
+    const fruits = ["apple", "banana", "cherry", 45];
+    for (const fruit in fruits) {
+        console.log(fruits[fruit]);
+    }
+</script>

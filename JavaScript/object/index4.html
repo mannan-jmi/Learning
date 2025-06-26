@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    
+    <!-- JS -->
+     <script>
+  
+        let person = {
+            first_name: 'Shakeel',
+            last_name: 'Ahamed',
+            full_name: function() {
+                return `${this.first_name} ${this.last_name}`;
+            },
+            // contact: {
+            //     mobile: '976556754',
+            //     phone: '0114589',
+            // }
+        }
+
+        // person.contact = {};
+        // person.contact.mobile = '976556754';
+        // person.contact.phone = '0114589';
+
+        person.contact = {
+            mobile: '976556754',
+            phone: '0114589'
+        };
+
+        console.log(person);
+
+        // Another example
+
+        // let user = {
+        //     name: 'Shakeel Ahamed',
+        //     address: {
+        //         currentAdress: "New Delhi",
+        //         homeAdress: 'Sambhal'
+        //     },
+        //     getCurrentAdress: function () {
+        //         return this.address.currentAdress;
+        //     }
+        // };
+        
+
+        let user = {};
+        user.name = 'Shakeel Ahamed';
+        user.address = {
+            currentAdress: "New Delhi",
+            homeAdress: 'Sambhal'
+        }
+        user.getCurrentAdress = function () {
+            return this.address.currentAdress;
+        }
+        
+        console.log(user.getCurrentAdress());
+        
+        
+     </script>
+</body>
+</html>

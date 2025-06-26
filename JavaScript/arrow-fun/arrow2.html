@@ -1,0 +1,21 @@
+<script>
+    // const person = {
+    //     fname: "Mannan",
+    //     lname: "Abdul",
+    //     id: "123658",
+    //     fullName: function () {
+    //         return this.fname + " " + this.lname;
+    //     },
+    // };
+
+    const person = {
+        fname: "Mannan",
+        lname: "Abdul",
+        id: "123658",
+        fullName: () => {
+            return this.fname + " " + this.lname; // through error undefined undefined
+        },
+    };
+
+    console.log(person.fullName());
+</script>

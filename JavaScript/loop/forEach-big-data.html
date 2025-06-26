@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Data Display By For In Loop</title>
+        <style>
+            table {
+                width: 100%;
+            }
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 10px;
+            }
+            .search {
+                margin-bottom: 25px;
+                margin-top: 25px;
+                display: flex;
+                justify-content: space-between; /* Pushes children to far ends */
+                align-items: center;
+            }
+            .input-field {
+                padding: 10px 15px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                outline: none;
+                width: 250px;
+                transition: border-color 0.3s, box-shadow 0.3s;
+            }
+
+            .input-field:focus {
+                border-color: #007bff;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            }
+        </style>
+    </head>
+    <body>
+        <!-- HTML Part -->
+        <div class="container">
+            <div class="search">
+                <h1>Student Data</h1>
+                <input
+                    type="text"
+                    onkeyup="searchData(this.value)"
+                    placeholder="Search Student"
+                    class="input-field"
+                />
+            </div>
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sr. No.</th>
+                            <th>Roll No.</th>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Gender</th>
+                        </tr>
+                    </thead>
+                    <tbody id="byJs"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- JS -->
+        <script>
+            // The JavaScript forEach loops through the array
+
+            let students = [
+                {
+                    id: 1,
+                    first_name: "Rosaleen",
+                    last_name: "Skentelbury",
+                    email: "rskentelbury0@globo.com",
+                    gender: "Female",
+                },
+                {
+                    id: 2,
+                    first_name: "Angy",
+                    last_name: "Plowes",
+                    email: "aplowes1@abc.net.au",
+                    gender: "Female",
+                },
+                {
+                    id: 3,
+                    first_name: "Talya",
+                    last_name: "Huzzay",
+                    email: "thuzzay2@webs.com",
+                    gender: "Female",
+                },
+                {
+                    id: 4,
+                    first_name: "Lincoln",
+                    last_name: "Darlasson",
+                    email: "ldarlasson3@cnbc.com",
+                    gender: "Male",
+                },
+                {
+                    id: 5,
+                    first_name: "Perle",
+                    last_name: "Pitson",
+                    email: "ppitson4@dailymail.co.uk",
+                    gender: "Polygender",
+                },
+                {
+                    id: 6,
+                    first_name: "Aksel",
+                    last_name: "Carville",
+                    email: "acarville5@smugmug.com",
+                    gender: "Male",
+                },
+                {
+                    id: 7,
+                    first_name: "Saundra",
+                    last_name: "Sparrowe",
+                    email: "ssparrowe6@ibm.com",
+                    gender: "Female",
+                },
+                {
+                    id: 8,
+                    first_name: "Danny",
+                    last_name: "O'Grada",
+                    email: "dograda7@webnode.com",
+                    gender: "Male",
+                },
+                {
+                    id: 9,
+                    first_name: "Charmian",
+                    last_name: "Cominotti",
+                    email: "ccominotti8@123-reg.co.uk",
+                    gender: "Female",
+                },
+                {
+                    id: 10,
+                    first_name: "Berkie",
+                    last_name: "Vandrill",
+                    email: "bvandrill9@youtu.be",
+                    gender: "Male",
+                },
+                {
+                    id: 11,
+                    first_name: "Abra",
+                    last_name: "Cray",
+                    email: "acraya@adobe.com",
+                    gender: "Female",
+                },
+                {
+                    id: 12,
+                    first_name: "Gaile",
+                    last_name: "Aleksic",
+                    email: "galeksicb@weather.com",
+                    gender: "Male",
+                },
+                {
+                    id: 13,
+                    first_name: "Peg",
+                    last_name: "Jacop",
+                    email: "pjacopc@unc.edu",
+                    gender: "Female",
+                },
+                {
+                    id: 14,
+                    first_name: "Kelli",
+                    last_name: "Hanvey",
+                    email: "khanveyd@epa.gov",
+                    gender: "Female",
+                },
+                {
+                    id: 15,
+                    first_name: "Symon",
+                    last_name: "Duckit",
+                    email: "sduckite@narod.ru",
+                    gender: "Male",
+                },
+                {
+                    id: 16,
+                    first_name: "Paddy",
+                    last_name: "Martusov",
+                    email: "pmartusovf@google.com.br",
+                    gender: "Male",
+                },
+                {
+                    id: 17,
+                    first_name: "Rossy",
+                    last_name: "Shilvock",
+                    email: "rshilvockg@ocn.ne.jp",
+                    gender: "Male",
+                },
+                {
+                    id: 18,
+                    first_name: "Fernande",
+                    last_name: "Campe",
+                    email: "fcampeh@vistaprint.com",
+                    gender: "Bigender",
+                },
+                {
+                    id: 19,
+                    first_name: "Dickie",
+                    last_name: "Flobert",
+                    email: "dfloberti@dropbox.com",
+                    gender: "Male",
+                },
+                {
+                    id: 20,
+                    first_name: "Sayers",
+                    last_name: "Leary",
+                    email: "slearyj@un.org",
+                    gender: "Male",
+                },
+                {
+                    id: 21,
+                    first_name: "Alexine",
+                    last_name: "Danick",
+                    email: "adanickk@apache.org",
+                    gender: "Female",
+                },
+                {
+                    id: 22,
+                    first_name: "Demetri",
+                    last_name: "Bernardinelli",
+                    email: "dbernardinellil@instagram.com",
+                    gender: "Male",
+                },
+                {
+                    id: 23,
+                    first_name: "Pietra",
+                    last_name: "Hynes",
+                    email: "phynesm@cdc.gov",
+                    gender: "Female",
+                },
+                {
+                    id: 24,
+                    first_name: "Kelley",
+                    last_name: "Hansana",
+                    email: "khansanan@w3.org",
+                    gender: "Male",
+                },
+                {
+                    id: 25,
+                    first_name: "Mercedes",
+                    last_name: "Rumin",
+                    email: "mrumino@jugem.jp",
+                    gender: "Female",
+                },
+                {
+                    id: 26,
+                    first_name: "Clementia",
+                    last_name: "Roswarn",
+                    email: "croswarnp@t.co",
+                    gender: "Female",
+                },
+                {
+                    id: 27,
+                    first_name: "Auroora",
+                    last_name: "Lantiffe",
+                    email: "alantiffeq@ask.com",
+                    gender: "Female",
+                },
+                {
+                    id: 28,
+                    first_name: "Adorne",
+                    last_name: "Cheine",
+                    email: "acheiner@europa.eu",
+                    gender: "Agender",
+                },
+                {
+                    id: 29,
+                    first_name: "Jard",
+                    last_name: "Alleyn",
+                    email: "jalleyns@etsy.com",
+                    gender: "Male",
+                },
+                {
+                    id: 30,
+                    first_name: "Esdras",
+                    last_name: "Sellick",
+                    email: "esellickt@arstechnica.com",
+                    gender: "Male",
+                },
+                {
+                    id: 31,
+                    first_name: "Boniface",
+                    last_name: "Heifer",
+                    email: "bheiferu@drupal.org",
+                    gender: "Non-binary",
+                },
+                {
+                    id: 32,
+                    first_name: "Asher",
+                    last_name: "Drage",
+                    email: "adragev@stumbleupon.com",
+                    gender: "Male",
+                },
+                {
+                    id: 33,
+                    first_name: "Ronny",
+                    last_name: "Wellum",
+                    email: "rwellumw@hostgator.com",
+                    gender: "Male",
+                },
+                {
+                    id: 34,
+                    first_name: "Terencio",
+                    last_name: "Davenhall",
+                    email: "tdavenhallx@walmart.com",
+                    gender: "Male",
+                },
+                {
+                    id: 35,
+                    first_name: "Ertha",
+                    last_name: "Sherewood",
+                    email: "esherewoody@census.gov",
+                    gender: "Female",
+                },
+                {
+                    id: 36,
+                    first_name: "Beryle",
+                    last_name: "Dulany",
+                    email: "bdulanyz@nationalgeographic.com",
+                    gender: "Female",
+                },
+                {
+                    id: 37,
+                    first_name: "Rora",
+                    last_name: "Gallier",
+                    email: "rgallier10@weebly.com",
+                    gender: "Female",
+                },
+                {
+                    id: 38,
+                    first_name: "Jedidiah",
+                    last_name: "Chittem",
+                    email: "jchittem11@gmpg.org",
+                    gender: "Male",
+                },
+                {
+                    id: 39,
+                    first_name: "Otha",
+                    last_name: "Ellerington",
+                    email: "oellerington12@homestead.com",
+                    gender: "Female",
+                },
+                {
+                    id: 40,
+                    first_name: "Clem",
+                    last_name: "Scarre",
+                    email: "cscarre13@mysql.com",
+                    gender: "Male",
+                },
+                {
+                    id: 41,
+                    first_name: "Ofella",
+                    last_name: "Phripp",
+                    email: "ophripp14@bizjournals.com",
+                    gender: "Non-binary",
+                },
+                {
+                    id: 42,
+                    first_name: "Oliy",
+                    last_name: "Makinson",
+                    email: "omakinson15@sfgate.com",
+                    gender: "Female",
+                },
+                {
+                    id: 43,
+                    first_name: "Thorstein",
+                    last_name: "Bardey",
+                    email: "tbardey16@engadget.com",
+                    gender: "Male",
+                },
+                {
+                    id: 44,
+                    first_name: "Lesli",
+                    last_name: "Batalini",
+                    email: "lbatalini17@opensource.org",
+                    gender: "Female",
+                },
+                {
+                    id: 45,
+                    first_name: "Candis",
+                    last_name: "Hutchcraft",
+                    email: "chutchcraft18@deliciousdays.com",
+                    gender: "Female",
+                },
+                {
+                    id: 46,
+                    first_name: "Germaine",
+                    last_name: "Petigrew",
+                    email: "gpetigrew19@umich.edu",
+                    gender: "Male",
+                },
+                {
+                    id: 47,
+                    first_name: "Karolina",
+                    last_name: "Wand",
+                    email: "kwand1a@admin.ch",
+                    gender: "Female",
+                },
+                {
+                    id: 48,
+                    first_name: "Arnaldo",
+                    last_name: "Pochin",
+                    email: "apochin1b@storify.com",
+                    gender: "Male",
+                },
+                {
+                    id: 49,
+                    first_name: "Eloise",
+                    last_name: "Farryan",
+                    email: "efarryan1c@php.net",
+                    gender: "Female",
+                },
+                {
+                    id: 50,
+                    first_name: "Brucie",
+                    last_name: "Evennett",
+                    email: "bevennett1d@fc2.com",
+                    gender: "Genderfluid",
+                },
+            ];
+
+            function loadDataAndRenderData(arrayData) {
+                let data = "";
+                arrayData.forEach(function (item, index) {
+                    let createStudenRowWithCol = `<tr>
+                        <td>${index + 1}</td>
+                        <td>${"2020" + item.id}</td>
+                        <td>${item.first_name} ${item.last_name}</td>
+                        <td>${item.email}</td>
+                        <td>${item.gender}</td>
+                    </tr>`;
+                    data = data + createStudenRowWithCol;
+                });
+                document.getElementById("byJs").innerHTML = data;
+            }
+
+            loadDataAndRenderData(students);
+
+            function searchData(value) {
+                if (value == "") {
+                    loadDataAndRenderData(students);
+                    return;
+                }
+
+                let seachedData = students.filter(function (item, index) {
+                    let fname = item.first_name.toLocaleLowerCase();
+                    let lname = item.last_name.toLocaleLowerCase();
+                    value = value.toLocaleLowerCase();
+                    return fname.startsWith(value) || lname.startsWith(value);
+                });
+
+                loadDataAndRenderData(seachedData);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Split And Join Function</title>
+  </head>
+  <body>
+    <script>
+      let message = "Lorem ipsum dolor, sit amet consectetur adipisicing elit.";
+      console.log("Original Text - ", message);
+      //   String to array
+      let splittedMessage = message.split(" "); // Separator to split string - here space is separator to split string into array
+
+      console.log("Split Text - ", splittedMessage);
+
+      //   Array to string
+      let joinedMessage = splittedMessage.join(" ");
+      console.log("Joined Text - ", joinedMessage);
+    </script>
+  </body>
+</html>
