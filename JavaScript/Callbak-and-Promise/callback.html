@@ -1,0 +1,23 @@
+<script>
+  function showOne(callback) {
+    setTimeout(() => {
+      console.log("1");
+
+      callback();
+    }, 0);
+  }
+
+  function showTwo(callback) {
+    setTimeout(() => {
+      console.log("2");
+
+      callback();
+    }, 5000);
+  }
+
+  function showThree() {
+    console.log("3");
+  }
+
+  showOne(showTwo(showThree));
+</script>

@@ -1,0 +1,30 @@
+<script>
+  function firstFn(callback, done) {
+    setTimeout(() => {
+      let getValue = callback();
+      let result = getValue * 10;
+      done(result);
+    }, 100);
+  }
+
+  function secondFn() {
+    return 10;
+  }
+
+  function output(res) {
+    console.log(res);
+  }
+
+  firstFn(secondFn, output);
+
+  //Alternative way to pass callback function anonymously in firstFn
+
+  firstFn(
+    function () {
+      return 10;
+    },
+    function (res) {
+      console.log(res);
+    }
+  );
+</script>

@@ -1,0 +1,36 @@
+<script>
+  function getNameFix(name) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (name == "Shakeel" || name == "Abdul") {
+          resolve(name);
+        } else {
+          reject("Name is not Shakeel or Abdul");
+        }
+      }, 100);
+    });
+  }
+
+  // Method chaining way to call promise function
+  getNameFix("Aayat")
+    .then((result) => {
+      let fullName = result + " " + "Ahamed";
+      console.log(fullName);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
+  // Another way to call through async await
+  async function run() {
+    try {
+      let name = await getNameFix("Rahul");
+      let fullName = name + " " + "Mannan";
+      console.log(fullName);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  run();
+</script>

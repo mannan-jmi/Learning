@@ -1,0 +1,42 @@
+<script>
+  // The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+  function getName(callback) {
+    setTimeout(() => {
+      callback("Shakeel");
+    }, 0);
+  }
+
+  let name = getName((res) => res);
+
+  let fullName = name + " " + "Ahamed";
+
+  console.log(fullName);
+
+  // we will get undefined in above example due to async task it will not wait to get return value from async
+  // Fix version with promise
+
+  function getNameFix() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("getNameFix trigger....");
+        resolve("shakeel");
+      }, 0);
+    });
+  }
+
+  // Method chaining way to call promise function
+  getNameFix().then((result) => {
+    let fn = result + " " + "Ahamed";
+    console.log(fn);
+  });
+
+  // Another way to call through async await
+  async function run() {
+    let n = await getNameFix();
+    let fn = n + " " + "Ahamed";
+    console.log(fn);
+  }
+
+  run();
+</script>

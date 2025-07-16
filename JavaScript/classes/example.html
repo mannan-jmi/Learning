@@ -1,0 +1,31 @@
+<script>
+  class Car {
+    constructor(name, md) {
+      this.name = name;
+      this.md = md;
+    }
+    nameWithYear(name, md) {
+      return name + " " + md;
+    }
+    nameWIthCurrentDate() {
+      return this.name + " " + new Date();
+    }
+  }
+
+  let carInc = new Car("nano", "1989");
+
+  console.log(carInc.nameWithYear("hundai", "1989"));
+  console.log(carInc.nameWIthCurrentDate());
+
+  // For refresh brainstorm
+  console.log("\n", "By Typical Object");
+  let carObj = {
+    name: "nano",
+    md: "1989",
+    nameWithYear: function () {
+      return this.name + " " + this.md;
+    },
+  };
+
+  console.log(carObj.nameWithYear());
+</script>

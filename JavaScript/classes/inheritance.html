@@ -1,0 +1,31 @@
+<script>
+  class Car {
+    constructor() {
+      this.carName = "Hundai";
+      this.md = "2020";
+      this.engine = "1997";
+      this.wheels = "after market wheel";
+      this.wiser = "black";
+      this.milage = "20";
+    }
+
+    concatNameWithColor() {
+      return this.carName + " " + this.wiser;
+    }
+  }
+
+  class CarDetailsWithModel extends Car {
+    constructor() {
+      super();
+      this.model = "i20";
+    }
+
+    concatNameWithColorAndModel() {
+      return this.concatNameWithColor() + " " + this.model;
+    }
+  }
+
+  let nameModel = new CarDetailsWithModel();
+  console.log(nameModel);
+  console.log(nameModel.concatNameWithColorAndModel());
+</script>
