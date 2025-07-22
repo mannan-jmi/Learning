@@ -1,0 +1,30 @@
+<script>
+  function getName() {
+    return new Promise((resolve, reject) => {
+      const isReject = true;
+      if (isReject) {
+        const msg = new Error("User name is not available");
+        reject(msg);
+      } else {
+        resolve("Shakeel Ahamed");
+      }
+    });
+  }
+
+  function getAddress() {
+    const address = new Promise((resolve, reject) => {
+      resolve("Sambhal, Aslampur");
+    });
+    return address;
+  }
+
+  // Promise any to call together promise method
+
+  Promise.any([getName(), getAddress()])
+    .then((result) => {
+      console.log(result); // when any one promise method resolved
+    })
+    .catch((error) => {
+      console.log(error.message); // When all promise method return rejected or error
+    });
+</script>

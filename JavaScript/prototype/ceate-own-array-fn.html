@@ -1,0 +1,19 @@
+<script>
+  // Definition:
+  // In Javascript, prototyping refers to the mechanism
+  // by which objects inherit features from other object.
+  // This is part of prototypal inheritance, which is a core concept in js.
+
+  // Almost everything in JS that is an object can have a prototype
+  // Array, Object, String, Function, Number, Boolean etc..
+
+  //   [].forEach, [].filter, "".toLocaleLowerCase(), Object.keys()
+
+  //   Creating an Array function via prototype
+  Array.prototype.isMannan = function () {
+    return this.includes("mannan");
+  };
+
+  const nameCheck = ["shakeel", "ahamed", "mannan"].isMannan();
+  console.log(nameCheck);
+</script>

@@ -1,0 +1,25 @@
+<script>
+  const str = "SHAKEEL AHAMED KHAN";
+
+  // Normal way to convert string into lowercase and added a index based number in every word
+  const toLowerStr = str.toLowerCase();
+
+  const toArray = toLowerStr.split(" ");
+
+  const mapStr = toArray.map((item, index) => {
+    return item + index;
+  });
+
+  const joinStr = mapStr.join(" ");
+
+  console.log(joinStr);
+
+  //   Now via method chaining
+  const result = str
+    .toLowerCase()
+    .split(" ")
+    .map((item, index) => item + index)
+    .join(" ");
+
+  console.log(result);
+</script>

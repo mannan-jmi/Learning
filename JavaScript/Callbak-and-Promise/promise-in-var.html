@@ -1,0 +1,19 @@
+<script>
+  const getName = new Promise((resolve, reject) => {
+    const isReject = false;
+    if (isReject) {
+      const msg = new Error("User name is not available");
+      reject(msg);
+    } else {
+      resolve("Shakeel Ahamed");
+    }
+  });
+
+  getName
+    .then((res) => {
+      console.log("Then Block - ", res);
+    })
+    .catch((error) => {
+      console.log(error.message);
+    });
+</script>

@@ -1,0 +1,26 @@
+<script>
+  function Person() {
+    this.name = "";
+    this.age = "";
+
+    this.setName = function (newName) {
+      this.name = newName;
+      return this; // Enables chaining
+    };
+
+    this.setAge = function (newAge) {
+      this.age = newAge;
+      return this;
+    };
+
+    this.sayHello = function () {
+      console.log(`Hello, my name is ${this.name} and I'm ${this.age} years old.`);
+      return this;
+    };
+  }
+
+  // Usage
+  const p = new Person();
+
+  p.setName("Shakeel").setAge(25).sayHello();
+</script>

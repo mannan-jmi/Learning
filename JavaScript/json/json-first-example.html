@@ -1,0 +1,16 @@
+<script>
+  "use strict";
+
+  const data = {
+    name: "Abdul Manna",
+    address: "Sambhal",
+  };
+
+  Object.freeze(data);
+
+  console.log(Object.isFrozen(data));
+
+  data.phone = "9876543210";
+
+  console.log(data);
+</script>

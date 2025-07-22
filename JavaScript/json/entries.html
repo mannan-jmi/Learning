@@ -1,0 +1,17 @@
+<script>
+  const data = {
+    name: "Abdul Manna",
+    address: "Sambhal",
+  };
+
+  const ent = Object.entries(data); // [['name', 'Abdul Manna'], ['address', 'Sambhal']]
+
+  let text = "";
+  ent.forEach((item) => {
+    item.forEach((el) => {
+      text += el + "\n";
+    });
+  });
+
+  console.log(text);
+</script>
