@@ -1,0 +1,22 @@
+<script>
+  function addition(v1, v2) {
+    const result = v1 + v2;
+    console.log("Basic example result - ", result);
+  }
+
+  addition(5, 8, 10);
+
+  // Rest Parameter in function
+  // Definition of rest operator:
+  // Used inside a function by three dot to collect all arguments into an array.
+
+  function additionByRestParameter(...input) {
+    let result = 0;
+    input.forEach((element) => {
+      result += element;
+    });
+    console.log("Rest example result - ", result);
+  }
+
+  additionByRestParameter(5, 8, 10, 50, 100);
+</script>

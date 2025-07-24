@@ -7,13 +7,35 @@
   // Almost everything in JS that is an object can have a prototype
   // Array, Object, String, Function, Number, Boolean etc..
 
-  //   [].forEach, [].filter, "".toLocaleLowerCase(), Object.keys()
+  //   [].forEach, [].filter, "".toLocaleLowerCase(), Object.keys(jsonValue)
 
   //   Creating an Array function via prototype
-  Array.prototype.isMannan = function () {
-    return this.includes("mannan");
+  Array.prototype.isMannan = function (str) {
+    return this.includes(str);
   };
 
-  const nameCheck = ["shakeel", "ahamed", "mannan"].isMannan();
+  const nameCheck = ["shakeel", "ahamed", "mannan"].isMannan("mannan");
   console.log(nameCheck);
+
+  // String prototyping example
+  String.prototype.greetingByMannan = function () {
+    return `Greeting ${this}`;
+  };
+
+  const greet = "Shakeel".greetingByMannan();
+  console.log(greet);
+
+  // with call back example like map, foreach, filter, find etc
+  String.prototype.showLettersByManna = function (callback) {
+    for (let i = 0; i < this.length; i++) {
+      callback(this[i]);
+    }
+  };
+
+  "Shakeel".showLettersByManna(function (value) {
+    console.log(value);
+    console.log("\n");
+  });
+
+  // Home work to show math table like this 5.mathTable()
 </script>
