@@ -1,0 +1,32 @@
+<script>
+  // Spread operator (...) allows us to quickly copy all or part of an existing array
+  // or object into another array or object.
+
+  /*
+  // call by value example - to explain
+  let fname = "shakeel";
+  let newName = fname;
+  newName = "hello";
+  console.log(fname);
+  console.log(newName);
+  */
+
+  /*
+  // call by reference example - old problem to explain spread op in better way
+  const fruits = ["apple", "banana", "grapes"];
+  const newFruits = fruits;
+  newFruits.push("Mango");
+  console.log("fruits -", fruits);
+  console.log("newFruits - ", newFruits);
+  */
+
+  const fruits = ["apple", "banana", "grapes"];
+  console.log("fruits -", fruits);
+  const newFruits = ["mango", ...fruits]; // copied all array values of fruits
+  console.log("newFruits - ", newFruits);
+
+  const yourGrocery = ["tea", "coffee", "bar"];
+  const friendGrocery = ["sugar", "coffee", "shampoo", "paneer"];
+  const newGrocery = [...yourGrocery, ...friendGrocery]; // copy and combined two array into another array
+  console.log(newGrocery);
+</script>

@@ -1,0 +1,25 @@
+<script>
+  // Object Destructuring in JavaScript is a syntax that allows you to extract properties from objects and assign them to variables in a short, clean way.
+  // OR
+  // Object destructuring is a feature in JavaScript that lets you unpack values from objects into distinct variables using a concise syntax.
+
+  const user = {
+    name: "Shakeel",
+    address: "Aslampur, Sambhal",
+    email: "sakmbd@gmail.com",
+  };
+
+  //   const name = user.name;
+  //   const email = user.email;
+  //   const addr = user.address
+
+  const { name, email, address: addr } = user; // Destructuring
+
+  console.log(name);
+  console.log(email);
+  console.log(addr);
+
+  // Spread operator partial copy
+  const { name: fullName, email: newEmail, ...partialUser } = user;
+  console.log(partialUser);
+</script>
